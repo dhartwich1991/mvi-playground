@@ -47,8 +47,11 @@ class MainFragment : Fragment(), MviView<MainIntent, MainViewState> {
         if (state.loading) {
             message.text = "Loading"
             return
-        } else {
-            message.text = "Done loading."
+        }
+
+        if (state.userList.isNotEmpty()) {
+            message.text = "User List is loaded!"
+            return
         }
 
         if (state.error) {
