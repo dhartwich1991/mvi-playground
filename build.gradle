@@ -9,11 +9,14 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.2.0-alpha18'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "com.vanniktech:gradle-dependency-graph-generator-plugin:0.5.0"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
 }
+
+apply plugin: "com.vanniktech.dependency.graph.generator"
 
 allprojects {
     repositories {
@@ -45,11 +48,12 @@ ext {
     espressoVersion = '3.0.1'
     rxjavaVersion = '2.1.7'
     rxKotlinVersion = '2.2.0'
-    rxandroidVersion = '2.0.1'
+    rxandroidVersion = '2.0.2'
     sqlbriteVersion = '2.0.0'
     jsr305Version = '3.0.1'
     rxBindingVersion = '2.0.0'
     archComponentsVersion = '1.0.0'
     mockitoKotlinVersion = '1.5.0'
+    retrofitVersion = '2.4.0'
+    okHttpVersion = '3.10.0'
 }
-

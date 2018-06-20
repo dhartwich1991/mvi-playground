@@ -49,13 +49,11 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0-alpha1'
     implementation "io.reactivex.rxjava2:rxkotlin:$rootProject.rxKotlinVersion"
     kapt 'androidx.lifecycle:lifecycle-compiler:2.0.0-alpha1'
-
     // Dependencies for local unit tests
     testImplementation "com.nhaarman:mockito-kotlin:$rootProject.mockitoKotlinVersion"
     testImplementation "junit:junit:$rootProject.junitVersion"
     testImplementation "org.mockito:mockito-all:$rootProject.mockitoVersion"
     testImplementation "org.hamcrest:hamcrest-all:$rootProject.hamcrestVersion"
-
     // Android Testing Support Library's runner and rules
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha3'
     androidTestImplementation 'androidx.test:rules:1.1.0-alpha3'
@@ -65,18 +63,23 @@ dependencies {
     androidTestImplementation "org.mockito:mockito-core:$rootProject.mockitoVersion"
     androidTestImplementation 'com.google.dexmaker:dexmaker:1.2'
     androidTestImplementation 'com.google.dexmaker:dexmaker-mockito:1.2'
-
     // Espresso UI Testing
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha3'
     androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.1.0-alpha3'
     androidTestImplementation 'androidx.test.espresso:espresso-intents:3.1.0-alpha3'
-
     // Resolve conflicts between main and test APK:
     androidTestImplementation 'androidx.annotation:annotation:1.0.0-alpha3'
     androidTestImplementation 'androidx.legacy:legacy-support-v4:1.0.0-alpha3'
     androidTestImplementation 'androidx.recyclerview:recyclerview:1.0.0-alpha3'
     androidTestImplementation 'androidx.appcompat:appcompat:1.0.0-alpha3'
     androidTestImplementation 'com.google.android.material:material:1.0.0-alpha3'
+    implementation 'android.arch.navigation:navigation-fragment:1.0.0-alpha02'
+    implementation 'android.arch.navigation:navigation-ui:1.0.0-alpha02'
+
+    implementation project(':profile')
+    implementation project(':main')
+    implementation project(':navigation')
+    implementation project(path: ':jenkins', configuration: 'default')
 }
 
 /*

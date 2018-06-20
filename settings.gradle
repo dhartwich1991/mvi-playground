@@ -1,1 +1,1 @@
-include ':app'
+include ':app', ':profile', ':main', ':mvi_core', ':core', ':navigation', ':jenkins'

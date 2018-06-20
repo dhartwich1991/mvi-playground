@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_graph">
+
+    <fragment
+        android:id="@+id/jenkinsOverviewFragment"
+        android:name="com.jdapplications.jenkins.JenkinsOverviewFragment"
+        android:label="JenkinsOverviewFragment" />
+
+</resources>
