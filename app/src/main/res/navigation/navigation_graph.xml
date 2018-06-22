@@ -4,11 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:startDestination="@id/mainFragment">
 
-    <!--<include app:graph="@navigation/"/>-->
-    <!--<include app:graph="@navigation/"/>-->
     <include app:graph="@navigation/profile_graph" />
     <include app:graph="@navigation/jenkins_graph" />
-    <!--<include app:graph="@navigation/"-->
+
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.jdapplications.mvitest.main.ui.main.MainFragment"
@@ -28,6 +26,4 @@
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
-
-
 </navigation>

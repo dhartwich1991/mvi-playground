@@ -2,11 +2,13 @@
 <navigation android:id="@+id/jenkins_graph"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:startDestination="@id/jenkinsFragment">
+    app:startDestination="@id/jenkinsFragment"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <fragment
         android:id="@+id/jenkinsFragment"
         android:name="com.jdapplications.jenkins.JenkinsOverviewFragment"
-        android:label="Jenkins" />
+        android:label="Jenkins"
+        tools:layout="@layout/jenkins_overview_fragment"/>
 
 </navigation>
