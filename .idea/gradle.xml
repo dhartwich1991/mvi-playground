@@ -11,9 +11,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/jenkins" />
-            <option value="$PROJECT_DIR$/main" />
             <option value="$PROJECT_DIR$/mvi_core" />
-            <option value="$PROJECT_DIR$/navigation" />
             <option value="$PROJECT_DIR$/profile" />
           </set>
         </option>

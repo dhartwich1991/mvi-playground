@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@+id/navigation_graph"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/mainFragment">
+
+    <!--<include app:graph="@navigation/"/>-->
+    <!--<include app:graph="@navigation/"/>-->
+    <include app:graph="@navigation/profile_graph" />
+    <include app:graph="@navigation/jenkins_graph" />
+    <!--<include app:graph="@navigation/"-->
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.jdapplications.mvitest.main.ui.main.MainFragment"
+        android:label="Jenkins Overview">
+        <action
+            android:id="@+id/openProfile"
+            app:destination="@+id/profile_graph"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/openJenkins"
+            app:destination="@id/jenkins_graph"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+
+</navigation>

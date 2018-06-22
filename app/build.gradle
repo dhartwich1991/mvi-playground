@@ -22,6 +22,19 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    // Specifies two flavor dimensions.
+
+    flavorDimensions "default"
+
+    productFlavors {
+        mock {
+
+        }
+        prod {
+
+        }
+    }
 }
 
 dependencies {
@@ -67,7 +80,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha3'
     androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.1.0-alpha3'
     androidTestImplementation 'androidx.test.espresso:espresso-intents:3.1.0-alpha3'
-    // Resolve conflicts between main and test APK:
+    // Resolve conflicts between com.jdapplications.mvitest.main and test APK:
     androidTestImplementation 'androidx.annotation:annotation:1.0.0-alpha3'
     androidTestImplementation 'androidx.legacy:legacy-support-v4:1.0.0-alpha3'
     androidTestImplementation 'androidx.recyclerview:recyclerview:1.0.0-alpha3'
@@ -77,9 +90,9 @@ dependencies {
     implementation 'android.arch.navigation:navigation-ui:1.0.0-alpha02'
 
     implementation project(':profile')
-    implementation project(':main')
-    implementation project(':navigation')
-    implementation project(path: ':jenkins', configuration: 'default')
+    implementation project(':mvi_core')
+    implementation project(':core')
+    implementation project(':jenkins')
 }
 
 /*

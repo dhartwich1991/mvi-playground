@@ -1,6 +1,10 @@
 apply plugin: 'com.android.library'
+
 apply plugin: 'kotlin-android'
+
 apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 28
@@ -26,18 +30,9 @@ android {
 
     // If you need to add more flavors, consider using flavor dimensions.
     productFlavors {
-        mock {
-        }
+        mock {}
         prod {}
     }
-
-    // Remove mockRelease as it's not needed.
-    android.variantFilter { variant ->
-        if (variant.buildType.name == 'release' && variant.getFlavors().get(0).name == 'mock') {
-            variant.setIgnore(true)
-        }
-    }
-
 }
 
 dependencies {
@@ -59,7 +54,9 @@ dependencies {
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0-alpha3'
 
+    implementation 'android.arch.navigation:navigation-fragment:1.0.0-alpha02'
+    implementation 'android.arch.navigation:navigation-ui:1.0.0-alpha02'
+
     implementation project(':core')
     implementation project(':mvi_core')
-    implementation project(':navigation')
 }
